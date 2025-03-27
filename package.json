@@ -1,10 +1,10 @@
 {
   "name": "inquirer-cli",
   "packageManager": "yarn@4.7.0",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
-    "bump:version": "yarn workspaces foreach -A version $(npx @inquirer-cli/select -c patch -c minor -c major 'Select Version')"
+    "version:bump": "yarn workspaces foreach -A version $(npx @inquirer-cli/select -c patch -c minor -c major 'Select Version')"
   },
   "workspaces": [
     "packages/*"

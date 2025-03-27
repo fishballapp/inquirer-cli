@@ -1,6 +1,6 @@
 {
   "name": "@inquirer-cli/select",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool for selecting an option using Inquirer.js",
   "main": "index.js",
   "bin": {

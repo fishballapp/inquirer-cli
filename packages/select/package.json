@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "description": "CLI tool for selecting an option using Inquirer.js",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": {
+    "inquirer-cli-select": "index.js"
+  },
   "type": "module",
   "dependencies": {
     "@inquirer/select": "^4.1.0",

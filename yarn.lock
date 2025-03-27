@@ -169,7 +169,7 @@ __metadata:
     "@inquirer/select": "npm:^4.1.0"
     minimist: "npm:^1.2.8"
   bin:
-    select: index.js
+    inquirer-cli-select: index.js
   languageName: unknown
   linkType: soft
 

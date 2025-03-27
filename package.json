@@ -1,0 +1,16 @@
+{
+  "name": "inquirer-cli",
+  "packageManager": "yarn@4.7.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  },
+  "author": "YCM Jason <me@ycmjason.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}

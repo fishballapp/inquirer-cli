@@ -1,0 +1,17 @@
+{
+  "name": "@inquirer-cli/input",
+  "version": "1.0.0",
+  "description": "CLI tool for text input using Inquirer.js",
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/input": "^4.1.8",
+    "minimist": "^1.2.8"
+  },
+  "author": "YCM Jason <me@ycmjason.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

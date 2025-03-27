@@ -1,0 +1,17 @@
+{
+  "name": "@inquirer-cli/confirm",
+  "version": "1.0.0",
+  "description": "CLI tool for yes/no confirmation using Inquirer.js",
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/confirm": "^5.1.8",
+    "minimist": "^1.2.8"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "YCM Jason <me@ycmjason.com>",
+  "license": "MIT"
+}

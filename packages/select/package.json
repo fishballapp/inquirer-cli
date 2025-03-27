@@ -1,0 +1,17 @@
+{
+  "name": "@inquirer-cli/select",
+  "version": "1.0.0",
+  "description": "CLI tool for selecting an option using Inquirer.js",
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/select": "^4.1.0",
+    "minimist": "^1.2.8"
+  },
+  "author": "YCM Jason <me@ycmjason.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

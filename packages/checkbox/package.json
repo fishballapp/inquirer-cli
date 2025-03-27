@@ -1,0 +1,17 @@
+{
+  "name": "@inquirer-cli/checkbox",
+  "version": "1.0.0",
+  "description": "CLI tool for selecting multiple options using Inquirer.js",
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/checkbox": "^4.1.4",
+    "minimist": "^1.2.8"
+  },
+  "author": "YCM Jason <me@ycmjason.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

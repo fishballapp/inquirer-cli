@@ -1,0 +1,18 @@
+{
+  "name": "@inquirer-cli/editor",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CLI tool for multi-line input using the default editor via Inquirer.js",
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/editor": "^4.2.9",
+    "minimist": "^1.2.8"
+  },
+  "author": "YCM Jason <me@ycmjason.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

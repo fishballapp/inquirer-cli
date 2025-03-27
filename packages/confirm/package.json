@@ -1,6 +1,6 @@
 {
   "name": "@inquirer-cli/confirm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool for yes/no confirmation using Inquirer.js",
   "main": "index.js",
   "bin": "index.js",

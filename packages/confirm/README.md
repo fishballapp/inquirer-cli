@@ -30,7 +30,8 @@ fi
 
 ## Example
 
-```bash
+```sh
+#!/bin/sh
 if $(npx @inquirer-cli/confirm "Do you want to continue?"); then
   echo "Proceeding..."
 else

@@ -27,7 +27,8 @@ echo "Password received. $password"
 
 ## Example
 
-```bash
+```sh
+#!/bin/sh
 password=$(npx @inquirer-cli/password -r "Enter your password")
 echo "Password received. $password"
 ```

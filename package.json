@@ -8,9 +8,29 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4"
   },
-  "author": "YCM Jason <me@ycmjason.com>",
+  "author": {
+    "name": "YCM Jason",
+    "email": "me@ycmjason.com",
+    "url": "https://www.ycmjason.com"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/fishballapp/inquirer-cli#readme",
+  "bugs": {
+    "url": "https://github.com/fishballapp/inquirer-cli/issues"
+  },
+  "keywords": [
+    "cli",
+    "inquirer",
+    "interactive",
+    "prompts",
+    "shell",
+    "automation"
+  ],
   "dependencies": {
     "minimist": "^1.2.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishballapp/inquirer-cli"
   }
 }

@@ -9,9 +9,34 @@
     "@inquirer/checkbox": "^4.1.4",
     "minimist": "^1.2.8"
   },
-  "author": "YCM Jason <me@ycmjason.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishballapp/inquirer-cli"
+  },
+  "author": {
+    "name": "YCM Jason",
+    "email": "me@ycmjason.com",
+    "url": "https://www.ycmjason.com"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/fishballapp/inquirer-cli/tree/main/packages/checkbox#readme",
+  "bugs": {
+    "url": "https://github.com/fishballapp/inquirer-cli/issues"
+  },
+  "keywords": [
+    "cli",
+    "inquirer",
+    "checkbox",
+    "multiple-choice",
+    "interactive",
+    "prompt"
+  ],
   "engines": {
     "node": ">=16.0.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
 }

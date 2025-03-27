@@ -10,9 +10,35 @@
     "@inquirer/editor": "^4.2.9",
     "minimist": "^1.2.8"
   },
-  "author": "YCM Jason <me@ycmjason.com>",
+  "author": {
+    "name": "YCM Jason",
+    "email": "me@ycmjason.com",
+    "url": "https://www.ycmjason.com"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/fishballapp/inquirer-cli/tree/main/packages/editor#readme",
+  "bugs": {
+    "url": "https://github.com/fishballapp/inquirer-cli/issues"
+  },
+  "keywords": [
+    "cli",
+    "inquirer",
+    "editor",
+    "multi-line",
+    "interactive",
+    "prompt"
+  ],
   "engines": {
     "node": ">=16.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishballapp/inquirer-cli"
+  },
+  "files": [
+    "index.js",
+    "prompt.js",
+    "package.json",
+    "README.md"
+  ]
 }

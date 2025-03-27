@@ -99,20 +99,17 @@ password=$(npx @inquirer-cli/password --message "Enter your password")
 echo "Password received."
 ```
 
-### `@inquirer-cli/editor`
+### ~~`@inquirer-cli/editor`~~ (🚧 NOT SUPPORTED YET)
+
+I wished `editor` would work like the following but sadly I couldn't make it work. Any help on this would be appreciated!
 
 > Uses [@inquirer/editor](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/editor).
 
-Opens the user's default text editor for multi-line input.
-
-Open the default editor for multi-line input:
 
 ```bash
 notes=$(npx @inquirer-cli/editor --message "Enter your notes")
 echo "Your notes: $notes"
 ```
-
-*Note: The examples above use `npx` for on-the-fly execution. If you've installed the packages globally, you can omit `npx`.*
 
 ## Options
 

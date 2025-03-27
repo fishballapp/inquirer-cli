@@ -1,7 +1,7 @@
 {
   "name": "@inquirer-cli/editor",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI tool for multi-line input using the default editor via Inquirer.js",
   "main": "index.js",
   "bin": "index.js",

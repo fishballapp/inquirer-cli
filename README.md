@@ -123,11 +123,8 @@ Each CLI prompt accepts various options to customize its behavior. Common option
 - `--choices` (or `-c`):
   A space-separated list of choices (applicable to `select` and `checkbox` prompts).
 
-- `--default` (or `-d`):
-  The default value if the user provides no input.
-
-- `--validate` (or `-v`):
-  A validation pattern or function to validate user input.
+- `--required` (or `-r`):
+  When set, empty responses will be reprompted (not applicable to `confirm`).
 
 For a full list of options and detailed usage, refer to the documentation of the respective `@inquirer-cli` package.
 

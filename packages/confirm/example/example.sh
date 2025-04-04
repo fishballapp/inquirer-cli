@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if $(npx @inquirer-cli/confirm "Do you want to continue?"); then
-  echo "Proceeding..."
+if $(npx -y @inquirer-cli/confirm "Do you want to continue?"); then
+  echo "Continuing..."
 else
-  echo "Operation cancelled."
+  echo "Aborted."
 fi

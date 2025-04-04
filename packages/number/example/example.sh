@@ -1,4 +1,4 @@
 #!/bin/sh
 
-age=$(npx @inquirer-cli/number -r "Enter your age")
-echo "You are $age years old."
+age=$(npx -y @inquirer-cli/number -r "Enter your age")
+echo "Age received: $age"

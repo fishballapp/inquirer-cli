@@ -16,7 +16,7 @@ const choices = [args.choice].flat();
 const required = args.required;
 
 function showHelp() {
-  console.log(`Usage: npx @inquirer-cli/select [options] <message>
+  console.log(`Usage: npx -y @inquirer-cli/select [options] <message>
 
 Options:
   <message>                 The message to display to the user (required)
@@ -25,7 +25,7 @@ Options:
   -h, --help                Show this help message and exit
 
 Example:
-  npx @inquirer-cli/select "Pick a fruit" -c "Apple" -c "Banana" --required`);
+  npx -y @inquirer-cli/select "Pick a fruit" -c "Apple" -c "Banana" --required`);
 }
 
 if (args.help || args.h) {

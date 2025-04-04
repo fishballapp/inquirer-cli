@@ -7,11 +7,12 @@ The `@inquirer-cli` suite provides standalone command-line interface (CLI) tools
 No installation required. Simply do to start the prompt:
 
 ```bash
-$ npx @inquirer-cli/<prompt-name> [...args]
+$ npx -y @inquirer-cli/<prompt-name> [...args]
 ```
 
-Replace `<prompt-name>` with the desired prompt listed in the next section.
+> **Note**: The `-y` flag is used with `npx` to skip the installation prompt. This is necessary because the CLI's output is consumed by `$()` in bash, which would otherwise cause the script to freeze.
 
+Replace `<prompt-name>` with the desired prompt listed in the next section.
 
 ## Prompts
 
@@ -27,7 +28,7 @@ Prompts the user for text input.
 Example:
 
 ```bash
-name=$(npx @inquirer-cli/input -r "What is your name?")
+name=$(npx -y @inquirer-cli/input -r "What is your name?")
 echo "Hello, $name!"
 ```
 
@@ -40,7 +41,7 @@ Requests a numeric input from the user.
 Ask the user for their age:
 
 ```bash
-age=$(npx @inquirer-cli/number -r "Enter your age")
+age=$(npx -y @inquirer-cli/number -r "Enter your age")
 echo "You are $age years old."
 ```
 
@@ -53,7 +54,7 @@ Presents a yes/no confirmation to the user.
 Confirm an action with the user:
 
 ```bash
-if $(npx @inquirer-cli/confirm "Do you want to continue?"); then
+if $(npx -y @inquirer-cli/confirm "Do you want to continue?"); then
   echo "Proceeding..."
 else
   echo "Operation cancelled."
@@ -82,7 +83,7 @@ Allows the user to select multiple options from a list.
 Allow the user to select multiple options:
 
 ```bash
-choices=$(npx @inquirer-cli/checkbox -r "Select your favorite colors" -c "Red" -c "Blue" -c "Green")
+choices=$(npx -y @inquirer-cli/checkbox -r "Select your favorite colors" -c "Red" -c "Blue" -c "Green")
 echo "You selected:"
 for choice in $choices; do
   echo "- $choice"
@@ -98,7 +99,7 @@ Prompts the user for sensitive information with input masking.
 Prompt the user for a password:
 
 ```bash
-password=$(npx @inquirer-cli/password -r "Enter your password")
+password=$(npx -y @inquirer-cli/password -r "Enter your password")
 echo "Password received. $password"
 ```
 
@@ -109,16 +110,13 @@ I wished `editor` would work like the following but sadly I couldn't make it wor
 > Uses [@inquirer/editor](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/editor).
 
 ```bash
-notes=$(npx @inquirer-cli/editor "Write your notes")
+notes=$(npx -y @inquirer-cli/editor "Write your notes")
 echo "Your notes: $notes"
 ```
 
 ## Options
 
 Each CLI prompt accepts various options to customize its behavior. Common options include:
-
-- `--message` (or `-m`):
-  The message to display to the user.
 
 - `--choices` (or `-c`):
   A space-separated list of choices (applicable to `select` and `checkbox` prompts).

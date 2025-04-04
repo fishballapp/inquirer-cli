@@ -9,14 +9,14 @@ const args = minimist(process.argv.slice(2), { string: '_' });
 const message = args._[0];
 
 function showHelp() {
-  console.log(`Usage: npx @inquirer-cli/editor [options] <message>
+  console.log(`Usage: npx -y @inquirer-cli/editor [options] <message>
 
 Options:
   <message>                 The message to display to the user (required)
   -h, --help                Show this help message and exit
 
 Example:
-  npx @inquirer-cli/editor "Write your notes"`);
+  npx -y @inquirer-cli/editor "Write your notes"`);
 }
 
 if (args.help || args.h) {

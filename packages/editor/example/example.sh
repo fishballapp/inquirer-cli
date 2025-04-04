@@ -1,4 +1,4 @@
 #!/bin/sh
 
-notes=$(npx @inquirer-cli/editor "Write your notes")
-echo "Your notes: $notes"
+notes=$(npx -y @inquirer-cli/editor "Write your notes")
+echo "Notes received: $notes"

@@ -13,7 +13,7 @@ const choices = [args.choice].flat();
 const required = args.required;
 
 function showHelp() {
-  console.log(`Usage: npx @inquirer-cli/checkbox [options] <message>
+  console.log(`Usage: npx -y @inquirer-cli/checkbox [options] <message>
 
 Options:
   <message>                 The message to display to the user (required)
@@ -22,7 +22,7 @@ Options:
   -h, --help                Show this help message and exit
 
 Example:
-  npx @inquirer-cli/checkbox "Select your favorite colors" -c "Red" -c "Blue" --required`);
+  npx -y @inquirer-cli/checkbox "Select your favorite colors" -c "Red" -c "Blue" --required`);
 }
 
 if (args.help || args.h) {

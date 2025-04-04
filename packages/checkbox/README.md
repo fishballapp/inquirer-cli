@@ -7,15 +7,17 @@ CLI tool for selecting multiple options using Inquirer.js.
 No installation required. Use `npx` to run the tool directly:
 
 ```bash
-npx @inquirer-cli/checkbox [...options]
+npx -y @inquirer-cli/checkbox [...options]
 ```
+
+> **Note**: The `-y` flag is used with `npx` to skip the installation prompt. This is necessary because the CLI's output is consumed by `$()` in bash, which would otherwise cause the script to freeze.
 
 ## Usage
 
 Prompt the user to select multiple options:
 
 ```bash
-choices=$(npx @inquirer-cli/checkbox -r "Select your favorite colors" -c "Red" -c "Blue" -c "Green")
+choices=$(npx -y @inquirer-cli/checkbox -r "Select your favorite colors" -c "Red" -c "Blue" -c "Green")
 echo "You selected:"
 for choice in $choices; do
   echo "- $choice"
@@ -33,7 +35,7 @@ done
 
 ```sh
 #!/bin/sh
-choices=$(npx @inquirer-cli/checkbox -r "Select your favorite colors" -c "Red" -c "Blue" -c "Green")
+choices=$(npx -y @inquirer-cli/checkbox -r "Select your favorite colors" -c "Red" -c "Blue" -c "Green")
 echo "You selected:"
 for choice in $choices; do
   echo "- $choice"

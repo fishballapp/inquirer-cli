@@ -7,15 +7,17 @@ CLI tool for numeric input using Inquirer.js.
 No installation required. Use `npx` to run the tool directly:
 
 ```bash
-npx @inquirer-cli/number [...options]
+npx -y @inquirer-cli/number [...options]
 ```
+
+> **Note**: The `-y` flag is used with `npx` to skip the installation prompt. This is necessary because the CLI's output is consumed by `$()` in bash, which would otherwise cause the script to freeze.
 
 ## Usage
 
 Prompt the user for numeric input:
 
 ```bash
-age=$(npx @inquirer-cli/number -r "Enter your age")
+age=$(npx -y @inquirer-cli/number -r "Enter your age")
 echo "You are $age years old."
 ```
 
@@ -29,7 +31,7 @@ echo "You are $age years old."
 
 ```sh
 #!/bin/sh
-age=$(npx @inquirer-cli/number -r "Enter your age")
+age=$(npx -y @inquirer-cli/number -r "Enter your age")
 echo "You are $age years old."
 ```
 

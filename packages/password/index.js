@@ -12,7 +12,7 @@ const message = args._[0];
 const required = args.required;
 
 function showHelp() {
-  console.log(`Usage: npx @inquirer-cli/password [options] <message>
+  console.log(`Usage: npx -y @inquirer-cli/password [options] <message>
 
 Options:
   <message>                 The message to display to the user (required)
@@ -20,7 +20,7 @@ Options:
   -h, --help                Show this help message and exit
 
 Example:
-  npx @inquirer-cli/password "Enter your password" --required`);
+  npx -y @inquirer-cli/password "Enter your password" --required`);
 }
 
 if (args.help || args.h) {

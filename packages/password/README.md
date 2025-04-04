@@ -7,15 +7,17 @@ CLI tool for masked password input using Inquirer.js.
 No installation required. Use `npx` to run the tool directly:
 
 ```bash
-npx @inquirer-cli/password [...options]
+npx -y @inquirer-cli/password [...options]
 ```
+
+> **Note**: The `-y` flag is used with `npx` to skip the installation prompt. This is necessary because the CLI's output is consumed by `$()` in bash, which would otherwise cause the script to freeze.
 
 ## Usage
 
 Prompt the user for a password:
 
 ```bash
-password=$(npx @inquirer-cli/password -r "Enter your password")
+password=$(npx -y @inquirer-cli/password -r "Enter your password")
 echo "Password received. $password"
 ```
 
@@ -29,7 +31,7 @@ echo "Password received. $password"
 
 ```sh
 #!/bin/sh
-password=$(npx @inquirer-cli/password -r "Enter your password")
+password=$(npx -y @inquirer-cli/password -r "Enter your password")
 echo "Password received. $password"
 ```
 

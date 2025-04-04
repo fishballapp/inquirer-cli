@@ -7,15 +7,17 @@ CLI tool for yes/no confirmation using Inquirer.js.
 No installation required. Use `npx` to run the tool directly:
 
 ```bash
-npx @inquirer-cli/confirm [...options]
+npx -y @inquirer-cli/confirm [...options]
 ```
+
+> **Note**: The `-y` flag is used with `npx` to skip the installation prompt. This is necessary because the CLI's output is consumed by `$()` in bash, which would otherwise cause the script to freeze.
 
 ## Usage
 
 Prompt the user for confirmation:
 
 ```bash
-if $(npx @inquirer-cli/confirm "Do you want to continue?"); then
+if $(npx -y @inquirer-cli/confirm "Do you want to continue?"); then
   echo "Proceeding..."
 else
   echo "Operation cancelled."
@@ -32,7 +34,7 @@ fi
 
 ```sh
 #!/bin/sh
-if $(npx @inquirer-cli/confirm "Do you want to continue?"); then
+if $(npx -y @inquirer-cli/confirm "Do you want to continue?"); then
   echo "Proceeding..."
 else
   echo "Operation cancelled."

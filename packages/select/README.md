@@ -7,15 +7,17 @@ CLI tool for selecting an option using Inquirer.js.
 No installation required. Use `npx` to run the tool directly:
 
 ```bash
-npx @inquirer-cli/select [...options]
+npx -y @inquirer-cli/select [...options]
 ```
+
+> **Note**: The `-y` flag is used with `npx` to skip the installation prompt. This is necessary because the CLI's output is consumed by `$()` in bash, which would otherwise cause the script to freeze.
 
 ## Usage
 
 Prompt the user to select an option:
 
 ```bash
-fruit=$(npx "@inquirer-cli/select" -c "Apple" -c "Banana" -c "Cherry" "Pick a fruit")
+fruit=$(npx -y "@inquirer-cli/select" -c "Apple" -c "Banana" -c "Cherry" "Pick a fruit")
 echo "You selected: $fruit"
 ```
 
@@ -30,7 +32,7 @@ echo "You selected: $fruit"
 
 ```sh
 #!/bin/sh
-fruit=$(npx "@inquirer-cli/select" -c "Apple" -c "Banana" -c "Cherry" "Pick a fruit")
+fruit=$(npx -y "@inquirer-cli/select" -c "Apple" -c "Banana" -c "Cherry" "Pick a fruit")
 echo "You selected: $fruit"
 ```
 

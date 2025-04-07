@@ -6,7 +6,7 @@
   "bin": "index.js",
   "type": "module",
   "dependencies": {
-    "@inquirer/input": "^4.1.8",
+    "@inquirer/input": "^4.1.9",
     "minimist": "^1.2.8"
   },
   "author": {

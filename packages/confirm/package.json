@@ -6,7 +6,7 @@
   "bin": "index.js",
   "type": "module",
   "dependencies": {
-    "@inquirer/confirm": "^5.1.8",
+    "@inquirer/confirm": "^5.1.9",
     "minimist": "^1.2.8"
   },
   "repository": {

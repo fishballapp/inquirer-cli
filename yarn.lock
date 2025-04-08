@@ -111,7 +111,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@inquirer-cli/confirm@workspace:packages/confirm"
   dependencies:
-    "@inquirer/confirm": "npm:^5.1.8"
+    "@inquirer/confirm": "npm:^5.1.9"
     minimist: "npm:^1.2.8"
   bin:
     confirm: index.js
@@ -191,18 +191,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inquirer/confirm@npm:^5.1.8":
-  version: 5.1.8
-  resolution: "@inquirer/confirm@npm:5.1.8"
+"@inquirer/confirm@npm:^5.1.9":
+  version: 5.1.9
+  resolution: "@inquirer/confirm@npm:5.1.9"
   dependencies:
-    "@inquirer/core": "npm:^10.1.9"
-    "@inquirer/type": "npm:^3.0.5"
+    "@inquirer/core": "npm:^10.1.10"
+    "@inquirer/type": "npm:^3.0.6"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/e4d3e3ef2c46db3235ead8c149fda442fb7e8ef5049d070803a3d9fbc7bd07a4c67175c66283b545a96944737c4567b4203502482ab3497a0575e35a42f5dcfd
+  checksum: 10c0/e35c134303f8151074479d6704c048676b2684debfde18a46ff0fb7585a3ee31dea551899ddcb48169fbef5dfe64c1948d2d8ac17a6939bedd31bb54c39bbea4
+  languageName: node
+  linkType: hard
+
+"@inquirer/core@npm:^10.1.10":
+  version: 10.1.10
+  resolution: "@inquirer/core@npm:10.1.10"
+  dependencies:
+    "@inquirer/figures": "npm:^1.0.11"
+    "@inquirer/type": "npm:^3.0.6"
+    ansi-escapes: "npm:^4.3.2"
+    cli-width: "npm:^4.1.0"
+    mute-stream: "npm:^2.0.0"
+    signal-exit: "npm:^4.1.0"
+    wrap-ansi: "npm:^6.2.0"
+    yoctocolors-cjs: "npm:^2.1.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+  checksum: 10c0/8d0a3b725e42e40efbdc6ed087283795f1e36e642b119dd7dd3cbf31fce74bdbdb1b987da16159cd2475f45b2ede7e33293ae92bad3ac481832889c230df3fc0
   languageName: node
   linkType: hard
 

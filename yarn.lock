@@ -100,7 +100,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@inquirer-cli/checkbox@workspace:packages/checkbox"
   dependencies:
-    "@inquirer/checkbox": "npm:^4.1.4"
+    "@inquirer/checkbox": "npm:^4.1.5"
     minimist: "npm:^1.2.8"
   bin:
     checkbox: index.js
@@ -173,13 +173,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@inquirer/checkbox@npm:^4.1.4":
-  version: 4.1.4
-  resolution: "@inquirer/checkbox@npm:4.1.4"
+"@inquirer/checkbox@npm:^4.1.5":
+  version: 4.1.5
+  resolution: "@inquirer/checkbox@npm:4.1.5"
   dependencies:
-    "@inquirer/core": "npm:^10.1.9"
+    "@inquirer/core": "npm:^10.1.10"
     "@inquirer/figures": "npm:^1.0.11"
-    "@inquirer/type": "npm:^3.0.5"
+    "@inquirer/type": "npm:^3.0.6"
     ansi-escapes: "npm:^4.3.2"
     yoctocolors-cjs: "npm:^2.1.2"
   peerDependencies:
@@ -187,7 +187,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/3770c6de7958825d032cfc469a658e0d4f7c15d0acbb00aaebf11d23171acf52cd932a475696afd960f8e09bde882872ae082b54163ccace3592ccd917daa644
+  checksum: 10c0/b984fb3ce8af34c327f3a85adcfe9fbd9eaac0c689bb9af79a5d55d508acb01de329747e8c923c9f4962e4006c353ed2dbe79e3fc9ae0f85f5851427dbed75ed
   languageName: node
   linkType: hard
 
@@ -203,6 +203,27 @@ __metadata:
     "@types/node":
       optional: true
   checksum: 10c0/e35c134303f8151074479d6704c048676b2684debfde18a46ff0fb7585a3ee31dea551899ddcb48169fbef5dfe64c1948d2d8ac17a6939bedd31bb54c39bbea4
+  languageName: node
+  linkType: hard
+
+"@inquirer/core@npm:^10.1.10":
+  version: 10.1.10
+  resolution: "@inquirer/core@npm:10.1.10"
+  dependencies:
+    "@inquirer/figures": "npm:^1.0.11"
+    "@inquirer/type": "npm:^3.0.6"
+    ansi-escapes: "npm:^4.3.2"
+    cli-width: "npm:^4.1.0"
+    mute-stream: "npm:^2.0.0"
+    signal-exit: "npm:^4.1.0"
+    wrap-ansi: "npm:^6.2.0"
+    yoctocolors-cjs: "npm:^2.1.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+  checksum: 10c0/8d0a3b725e42e40efbdc6ed087283795f1e36e642b119dd7dd3cbf31fce74bdbdb1b987da16159cd2475f45b2ede7e33293ae92bad3ac481832889c230df3fc0
   languageName: node
   linkType: hard
 

@@ -3,7 +3,6 @@
   "name": "inquirer-cli",
   "keywords": ["cli", "inquirer", "interactive", "prompts", "shell", "automation"],
   "license": "MIT",
-  "version": "1.0.4",
   "author": {
     "name": "YCM Jason",
     "email": "me@ycmjason.com",
@@ -18,7 +17,8 @@
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
   "scripts": {
-    "version:bump": "pnpm -r version $(npx -y @inquirer-cli/select -c patch -c minor -c major 'Select Version')"
+    "check:fix": "biome check --fix",
+    "version:bump": "pnpm -r exec pnpm version --no-git-tag-version $(npx -y @inquirer-cli/select -c patch -c minor -c major 'Select Version') && pnpm check:fix"
   },
   "dependencies": {
     "minimist": "catalog:"

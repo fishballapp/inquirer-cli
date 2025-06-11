@@ -6,8 +6,8 @@
   "bin": "index.js",
   "type": "module",
   "dependencies": {
-    "@inquirer/confirm": "^5.1.9",
-    "minimist": "^1.2.8"
+    "@inquirer/confirm": "catalog:",
+    "minimist": "catalog:"
   },
   "repository": {
     "type": "git",
@@ -26,17 +26,6 @@
   "bugs": {
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
-  "keywords": [
-    "cli",
-    "inquirer",
-    "confirm",
-    "yes-no",
-    "interactive",
-    "prompt"
-  ],
-  "files": [
-    "index.js",
-    "package.json",
-    "README.md"
-  ]
+  "keywords": ["cli", "inquirer", "confirm", "yes-no", "interactive", "prompt"],
+  "files": ["index.js", "package.json", "README.md"]
 }

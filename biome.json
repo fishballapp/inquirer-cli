@@ -13,8 +13,12 @@
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 100,
-    "ignore": ["package.json"]
+    "lineWidth": 100
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    }
   },
   "javascript": {
     "formatter": {

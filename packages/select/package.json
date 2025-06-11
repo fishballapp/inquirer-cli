@@ -8,8 +8,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@inquirer/select": "^4.1.0",
-    "minimist": "^1.2.8"
+    "@inquirer/select": "catalog:",
+    "minimist": "catalog:"
   },
   "author": {
     "name": "YCM Jason",
@@ -21,14 +21,7 @@
   "bugs": {
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
-  "keywords": [
-    "cli",
-    "inquirer",
-    "select",
-    "dropdown",
-    "interactive",
-    "prompt"
-  ],
+  "keywords": ["cli", "inquirer", "select", "dropdown", "interactive", "prompt"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fishballapp/inquirer-cli"
@@ -36,9 +29,5 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "files": [
-    "index.js",
-    "package.json",
-    "README.md"
-  ]
+  "files": ["index.js", "package.json", "README.md"]
 }

@@ -9,6 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
+    # https://docs.npmjs.com/generating-provenance-statements#example-github-actions-workflow
     permissions:
       contents: read
       id-token: write
@@ -17,17 +18,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 23
-          cache: 'yarn'
+          node-version: 24
+          cache: 'pnpm'
           registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install --frozen-lockfile
 
       - name: Publish to npm
-        run: yarn workspaces foreach -A --no-private --topological-dev --verbose exec sh ../../scripts/publish.sh
+        run: pnpm -r publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

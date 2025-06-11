@@ -1,40 +1,30 @@
 {
-  "name": "inquirer-cli",
-  "packageManager": "yarn@4.7.0",
-  "version": "1.0.4",
   "private": true,
-  "scripts": {
-    "version:bump": "yarn workspaces foreach -A version $(npx -y @inquirer-cli/select -c patch -c minor -c major 'Select Version')"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4"
-  },
+  "name": "inquirer-cli",
+  "keywords": ["cli", "inquirer", "interactive", "prompts", "shell", "automation"],
+  "license": "MIT",
+  "version": "1.0.4",
   "author": {
     "name": "YCM Jason",
     "email": "me@ycmjason.com",
     "url": "https://www.ycmjason.com"
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishballapp/inquirer-cli"
+  },
   "homepage": "https://github.com/fishballapp/inquirer-cli#readme",
   "bugs": {
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
-  "keywords": [
-    "cli",
-    "inquirer",
-    "interactive",
-    "prompts",
-    "shell",
-    "automation"
-  ],
-  "dependencies": {
-    "minimist": "^1.2.8"
+  "scripts": {
+    "version:bump": "pnpm -r version $(npx -y @inquirer-cli/select -c patch -c minor -c major 'Select Version')"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fishballapp/inquirer-cli"
-  }
+  "dependencies": {
+    "minimist": "catalog:"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  },
+  "packageManager": "pnpm@10.12.1"
 }

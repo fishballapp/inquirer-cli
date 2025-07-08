@@ -19,8 +19,8 @@ catalogs:
       specifier: ^4.1.12
       version: 4.1.12
     '@inquirer/number':
-      specifier: ^3.0.15
-      version: 3.0.15
+      specifier: ^3.0.16
+      version: 3.0.16
     '@inquirer/password':
       specifier: ^4.0.15
       version: 4.0.15
@@ -83,7 +83,7 @@ importers:
     dependencies:
       '@inquirer/number':
         specifier: 'catalog:'
-        version: 3.0.15
+        version: 3.0.16
       minimist:
         specifier: 'catalog:'
         version: 1.2.8
@@ -188,6 +188,15 @@ packages:
       '@types/node':
         optional: true
 
+  '@inquirer/core@10.1.14':
+    resolution: {integrity: sha512-Ma+ZpOJPewtIYl6HZHZckeX1STvDnHTCB2GVINNUlSEn2Am6LddWwfPkIGY0IUFVjUUrr/93XlBwTK6mfLjf0A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@types/node': '>=18'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+
   '@inquirer/editor@4.2.13':
     resolution: {integrity: sha512-WbicD9SUQt/K8O5Vyk9iC2ojq5RHoCLK6itpp2fHsWe44VxxcA9z3GTWlvjSTGmMQpZr+lbVmrxdHcumJoLbMA==}
     engines: {node: '>=18'}
@@ -210,8 +219,8 @@ packages:
       '@types/node':
         optional: true
 
-  '@inquirer/number@3.0.15':
-    resolution: {integrity: sha512-xWg+iYfqdhRiM55MvqiTCleHzszpoigUpN5+t1OMcRkJrUrw7va3AzXaxvS+Ak7Gny0j2mFSTv2JJj8sMtbV2g==}
+  '@inquirer/number@3.0.16':
+    resolution: {integrity: sha512-kMrXAaKGavBEoBYUCgualbwA9jWUx2TjMA46ek+pEKy38+LFpL9QHlTd8PO2kWPUgI/KB+qi02o4y2rwXbzr3Q==}
     engines: {node: '>=18'}
     peerDependencies:
       '@types/node': '>=18'
@@ -390,6 +399,17 @@ snapshots:
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.2
 
+  '@inquirer/core@10.1.14':
+    dependencies:
+      '@inquirer/figures': 1.0.12
+      '@inquirer/type': 3.0.7
+      ansi-escapes: 4.3.2
+      cli-width: 4.1.0
+      mute-stream: 2.0.0
+      signal-exit: 4.1.0
+      wrap-ansi: 6.2.0
+      yoctocolors-cjs: 2.1.2
+
   '@inquirer/editor@4.2.13':
     dependencies:
       '@inquirer/core': 10.1.13
@@ -403,9 +423,9 @@ snapshots:
       '@inquirer/core': 10.1.13
       '@inquirer/type': 3.0.7
 
-  '@inquirer/number@3.0.15':
+  '@inquirer/number@3.0.16':
     dependencies:
-      '@inquirer/core': 10.1.13
+      '@inquirer/core': 10.1.14
       '@inquirer/type': 3.0.7
 
   '@inquirer/password@4.0.15':

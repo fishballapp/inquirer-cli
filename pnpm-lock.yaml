@@ -22,8 +22,8 @@ catalogs:
       specifier: ^3.0.15
       version: 3.0.15
     '@inquirer/password':
-      specifier: ^4.0.15
-      version: 4.0.15
+      specifier: ^4.0.16
+      version: 4.0.16
     '@inquirer/select':
       specifier: ^4.2.3
       version: 4.2.3
@@ -92,7 +92,7 @@ importers:
     dependencies:
       '@inquirer/password':
         specifier: 'catalog:'
-        version: 4.0.15
+        version: 4.0.16
       minimist:
         specifier: 'catalog:'
         version: 1.2.8
@@ -188,6 +188,15 @@ packages:
       '@types/node':
         optional: true
 
+  '@inquirer/core@10.1.14':
+    resolution: {integrity: sha512-Ma+ZpOJPewtIYl6HZHZckeX1STvDnHTCB2GVINNUlSEn2Am6LddWwfPkIGY0IUFVjUUrr/93XlBwTK6mfLjf0A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@types/node': '>=18'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+
   '@inquirer/editor@4.2.13':
     resolution: {integrity: sha512-WbicD9SUQt/K8O5Vyk9iC2ojq5RHoCLK6itpp2fHsWe44VxxcA9z3GTWlvjSTGmMQpZr+lbVmrxdHcumJoLbMA==}
     engines: {node: '>=18'}
@@ -219,8 +228,8 @@ packages:
       '@types/node':
         optional: true
 
-  '@inquirer/password@4.0.15':
-    resolution: {integrity: sha512-75CT2p43DGEnfGTaqFpbDC2p2EEMrq0S+IRrf9iJvYreMy5mAWj087+mdKyLHapUEPLjN10mNvABpGbk8Wdraw==}
+  '@inquirer/password@4.0.16':
+    resolution: {integrity: sha512-g8BVNBj5Zeb5/Y3cSN+hDUL7CsIFDIuVxb9EPty3lkxBaYpjL5BNRKSYOF9yOLe+JOcKFd+TSVeADQ4iSY7rbg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@types/node': '>=18'
@@ -390,6 +399,17 @@ snapshots:
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.2
 
+  '@inquirer/core@10.1.14':
+    dependencies:
+      '@inquirer/figures': 1.0.12
+      '@inquirer/type': 3.0.7
+      ansi-escapes: 4.3.2
+      cli-width: 4.1.0
+      mute-stream: 2.0.0
+      signal-exit: 4.1.0
+      wrap-ansi: 6.2.0
+      yoctocolors-cjs: 2.1.2
+
   '@inquirer/editor@4.2.13':
     dependencies:
       '@inquirer/core': 10.1.13
@@ -408,9 +428,9 @@ snapshots:
       '@inquirer/core': 10.1.13
       '@inquirer/type': 3.0.7
 
-  '@inquirer/password@4.0.15':
+  '@inquirer/password@4.0.16':
     dependencies:
-      '@inquirer/core': 10.1.13
+      '@inquirer/core': 10.1.14
       '@inquirer/type': 3.0.7
       ansi-escapes: 4.3.2
 

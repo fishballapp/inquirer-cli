@@ -7,7 +7,7 @@ catalog:
   '@inquirer/editor': ^4.2.13
   '@inquirer/input': ^4.1.12
   '@inquirer/number': ^3.0.15
-  '@inquirer/password': ^4.0.15
+  '@inquirer/password': ^4.0.17
   '@inquirer/select': ^4.2.3
   minimist: ^1.2.8
 

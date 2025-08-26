@@ -24,7 +24,7 @@
     "minimist": "catalog:"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4"
+    "@biomejs/biome": "^2.2.2"
   },
   "packageManager": "pnpm@10.12.1"
 }

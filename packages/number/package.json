@@ -1,6 +1,6 @@
 {
   "name": "@inquirer-cli/number",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "CLI tool for numeric input using Inquirer.js",
   "main": "index.js",
   "bin": "index.js",

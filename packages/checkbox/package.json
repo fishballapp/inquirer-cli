@@ -23,9 +23,20 @@
   "bugs": {
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
-  "keywords": ["cli", "inquirer", "checkbox", "multiple-choice", "interactive", "prompt"],
+  "keywords": [
+    "cli",
+    "inquirer",
+    "checkbox",
+    "multiple-choice",
+    "interactive",
+    "prompt"
+  ],
   "engines": {
     "node": ">=16.0.0"
   },
-  "files": ["index.js", "package.json", "README.md"]
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
 }

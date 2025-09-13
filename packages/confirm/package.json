@@ -26,6 +26,17 @@
   "bugs": {
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
-  "keywords": ["cli", "inquirer", "confirm", "yes-no", "interactive", "prompt"],
-  "files": ["index.js", "package.json", "README.md"]
+  "keywords": [
+    "cli",
+    "inquirer",
+    "confirm",
+    "yes-no",
+    "interactive",
+    "prompt"
+  ],
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
 }

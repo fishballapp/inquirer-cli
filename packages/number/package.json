@@ -19,7 +19,14 @@
   "bugs": {
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
-  "keywords": ["cli", "inquirer", "number", "numeric", "interactive", "prompt"],
+  "keywords": [
+    "cli",
+    "inquirer",
+    "number",
+    "numeric",
+    "interactive",
+    "prompt"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fishballapp/inquirer-cli"
@@ -27,5 +34,9 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "files": ["index.js", "package.json", "README.md"]
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
 }

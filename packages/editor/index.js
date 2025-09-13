@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // @inquirer-cli/editor is not supported yet due to technical difficulties.
 import { spawn } from 'node:child_process';
-import { closeSync, openSync, writeSync } from 'node:fs';
+import { closeSync, openSync } from 'node:fs';
 import { join } from 'node:path';
 import minimist from 'minimist';
 

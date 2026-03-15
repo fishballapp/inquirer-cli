@@ -24,18 +24,18 @@ Example:
   npx @inquirer-cli/confirm -y "Do you want to continue?"`);
 }
 
+if (args.help || args.h) {
+  showHelp();
+  process.exit(0);
+}
+
 if (!message) {
   console.error('Error: <message> is required.');
   showHelp();
   process.exit(1);
 }
 
-if (args.help || args.h) {
-  showHelp();
-  process.exit(0);
-}
-
-(async () => {
+void (async () => {
   const answer = await confirm(
     {
       message,

@@ -31,8 +31,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Lint
+        run: npx biome check
+
+      - name: Test
+        run: pnpm test
+
       - name: Publish to npm
         run: pnpm -r publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true

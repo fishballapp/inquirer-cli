@@ -9,6 +9,7 @@
     "shell",
     "automation"
   ],
+  "type": "module",
   "license": "MIT",
   "author": {
     "name": "YCM Jason",
@@ -24,6 +25,7 @@
     "url": "https://github.com/fishballapp/inquirer-cli/issues"
   },
   "scripts": {
+    "test": "node --test 'packages/*/index.test.js'",
     "check:fix": "biome check --fix",
     "version:bump": "pnpm -r exec pnpm version --no-git-tag-version $(npx -y @inquirer-cli/select -c patch -c minor -c major 'Select Version') && pnpm check:fix"
   },
@@ -31,7 +33,8 @@
     "minimist": "catalog:"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.4"
+    "@biomejs/biome": "^2.4.7",
+    "@inquirer-cli/test-helper": "workspace:*"
   },
   "packageManager": "pnpm@10.16.0+sha512.8066e7b034217b700a9a4dbb3a005061d641ba130a89915213a10b3ca4919c19c037bec8066afdc559b89635fdb806b16ea673f2468fbb28aabfa13c53e3f769"
 }

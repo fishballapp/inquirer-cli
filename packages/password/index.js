@@ -34,7 +34,7 @@ if (!message) {
   process.exit(1);
 }
 
-(async () => {
+void (async () => {
   const answer = await password({ message, required }, { output: process.stderr });
   console.log(answer);
 })();

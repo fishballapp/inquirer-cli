@@ -1,14 +1,18 @@
 packages:
   - packages/*
 
+settings:
+  catalogMode: strict
+  cleanupUnusedCatalogs: true
+
 catalog:
-  '@inquirer/checkbox': ^4.2.2
-  '@inquirer/confirm': ^5.1.16
-  '@inquirer/editor': ^4.2.18
-  '@inquirer/input': ^4.2.2
-  '@inquirer/number': ^3.0.18
-  '@inquirer/password': ^4.0.18
-  '@inquirer/select': ^4.3.2
+  '@inquirer/checkbox': ^5.1.0
+  '@inquirer/confirm': ^6.0.8
+  '@inquirer/editor': ^5.0.8
+  '@inquirer/input': ^5.0.8
+  '@inquirer/number': ^4.0.8
+  '@inquirer/password': ^5.0.8
+  '@inquirer/select': ^5.1.0
   minimist: ^1.2.8
 
 onlyBuiltDependencies:

@@ -1,57 +1,59 @@
 # @inquirer-cli
 
-The `@inquirer-cli` suite provides standalone command-line interface (CLI) tools for various prompt types, leveraging the robust functionality of [Inquirer.js](https://github.com/SBoudrias/Inquirer.js). These tools enable developers to incorporate interactive prompts directly into shell scripts or command pipelines without the need to write custom JavaScript code.
+Interactive command-line prompts for shell scripts, powered by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js).
 
-## Installation
+The `@inquirer-cli` suite lets you add interactive prompts (text input, confirmations, selections, and more) to any shell script - no JavaScript required.
 
-No installation required. Simply do to start the prompt:
+## Quick Start
+
+No installation needed. Run any prompt directly with `npx`:
 
 ```bash
-$ npx -y @inquirer-cli/<prompt-name> [...args]
+name=$(npx -y @inquirer-cli/input "What is your name?")
+echo "Hello, $name!"
 ```
 
-> **Note**: The `-y` flag is used with `npx` to skip the installation prompt. This is necessary because the CLI's output is consumed by `$()` in bash, which would otherwise cause the script to freeze.
+> **Why `-y`?** The `-y` flag auto-confirms the `npx` install prompt. Without it, the confirmation prompt would interfere when capturing output with `$()`.
 
-Replace `<prompt-name>` with the desired prompt listed in the next section.
+## How It Works
+
+Each prompt renders its UI to **stderr** and writes the user's answer to **stdout**. This means you can capture the answer with `$()` while the prompt remains visible in the terminal.
 
 ## Prompts
 
-Each prompt type is available as a separate package under the `@inquirer-cli` scope:
-Each package corresponds to an Inquirer.js prompt type and is designed to be used independently.
-
 ### [`@inquirer-cli/input`](./packages/input/README.md)
 
-> Uses [@inquirer/input](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/input).
-
-Prompts the user for text input.
-
-Example:
+Prompts for free-text input.
 
 ```bash
 name=$(npx -y @inquirer-cli/input -r "What is your name?")
 echo "Hello, $name!"
 ```
 
+| Option | Description |
+|---|---|
+| `<message>` | The prompt message (required) |
+| `-r, --required` | Reject empty input |
+| `-h, --help` | Show help |
+
 ### [`@inquirer-cli/number`](./packages/number/README.md)
 
-> Uses [@inquirer/number](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/number).
-
-Requests a numeric input from the user.
-
-Ask the user for their age:
+Prompts for numeric input.
 
 ```bash
 age=$(npx -y @inquirer-cli/number -r "Enter your age")
 echo "You are $age years old."
 ```
 
+| Option | Description |
+|---|---|
+| `<message>` | The prompt message (required) |
+| `-r, --required` | Reject empty input |
+| `-h, --help` | Show help |
+
 ### [`@inquirer-cli/confirm`](./packages/confirm/README.md)
 
-> Uses [@inquirer/confirm](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/confirm).
-
-Presents a yes/no confirmation to the user.
-
-Confirm an action with the user:
+Prompts for a yes/no confirmation. Outputs `true` or `false`.
 
 ```bash
 if $(npx -y @inquirer-cli/confirm "Do you want to continue?"); then
@@ -61,79 +63,96 @@ else
 fi
 ```
 
+| Option | Description |
+|---|---|
+| `<message>` | The prompt message (required) |
+| `-y, --yes` | Default to "yes" instead of "no" |
+| `-h, --help` | Show help |
+
 ### [`@inquirer-cli/select`](./packages/select/README.md)
 
-> Uses [@inquirer/select](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/select).
-
-Offers a list of options for the user to select one.
-
-Let the user choose a fruit:
+Prompts the user to pick one option from a list.
 
 ```bash
-fruit=$(npx "@inquirer-cli/select" -c "Apple" -c "Banana" -c "Cherry" "Pick a fruit")
+fruit=$(npx -y @inquirer-cli/select -c Apple -c Banana -c Cherry "Pick a fruit")
 echo "You selected: $fruit"
 ```
 
+| Option | Description |
+|---|---|
+| `<message>` | The prompt message (required) |
+| `-c, --choice <value>` | Add a choice (use multiple times, at least one required) |
+| `-r, --required` | Reject empty selection |
+| `-h, --help` | Show help |
+
 ### [`@inquirer-cli/checkbox`](./packages/checkbox/README.md)
 
-> Uses [@inquirer/checkbox](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/checkbox).
-
-Allows the user to select multiple options from a list.
-
-Allow the user to select multiple options:
+Prompts the user to select multiple options from a list. Outputs selected values as a space-separated string.
 
 ```bash
-choices=$(npx -y @inquirer-cli/checkbox -r "Select your favorite colors" -c "Red" -c "Blue" -c "Green")
+colors=$(npx -y @inquirer-cli/checkbox -r "Select your favorite colors" -c Red -c Blue -c Green)
 echo "You selected:"
-for choice in $choices; do
-  echo "- $choice"
+for color in $colors; do
+  echo "- $color"
 done
 ```
 
+| Option | Description |
+|---|---|
+| `<message>` | The prompt message (required) |
+| `-c, --choice <value>` | Add a choice (use multiple times, at least one required) |
+| `-r, --required` | Require at least one selection |
+| `-h, --help` | Show help |
+
 ### [`@inquirer-cli/password`](./packages/password/README.md)
 
-> Uses [@inquirer/password](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/password).
-
-Prompts the user for sensitive information with input masking.
-
-Prompt the user for a password:
+Prompts for sensitive input with masking.
 
 ```bash
-password=$(npx -y @inquirer-cli/password -r "Enter your password")
-echo "Password received. $password"
+secret=$(npx -y @inquirer-cli/password -r "Enter your password")
 ```
 
-### ~~[`@inquirer-cli/editor`](./packages/editor/README.md)~~ (🚧 NOT SUPPORTED YET)
+| Option | Description |
+|---|---|
+| `<message>` | The prompt message (required) |
+| `-r, --required` | Reject empty input |
+| `-h, --help` | Show help |
 
-I wished `editor` would work like the following but sadly I couldn't make it work. Any help on this would be appreciated!
+### ~~[`@inquirer-cli/editor`](./packages/editor/README.md)~~ (not supported yet)
 
-> Uses [@inquirer/editor](https://github.com/SBoudrias/Inquirer.js/tree/main/packages/editor).
+Opens the user's default editor for multi-line input. This package is currently not functional due to technical difficulties. Contributions welcome!
 
 ```bash
 notes=$(npx -y @inquirer-cli/editor "Write your notes")
 echo "Your notes: $notes"
 ```
 
-## Options
+## Full Example
 
-Each CLI prompt accepts various options to customize its behavior. Common options include:
+```bash
+#!/bin/sh
 
-- `--choices` (or `-c`):
-  A space-separated list of choices (applicable to `select` and `checkbox` prompts).
+name=$(npx -y @inquirer-cli/input -r "What is your name?")
+age=$(npx -y @inquirer-cli/number -r "How old are you?")
+lang=$(npx -y @inquirer-cli/select -c JavaScript -c Python -c Go "Favorite language?")
 
-- `--required` (or `-r`):
-  When set, empty responses will be reprompted (not applicable to `confirm`).
+if $(npx -y @inquirer-cli/confirm "Save profile?"); then
+  echo "Saved: $name, age $age, likes $lang"
+fi
+```
 
-For a full list of options and detailed usage, refer to the documentation of the respective `@inquirer-cli` package.
+## Requirements
+
+- Node.js >= 16
 
 ## Author
 
-[@ycmjason](https://github.com/ycmjason))
+[@ycmjason](https://github.com/ycmjason)
 
 ## License
 
-Licensed under the MIT License.
+MIT
 
 ---
 
-*The `@inquirer-cli` project is an independent initiative and is not affiliated with or endorsed by Inquirer.js.*
+*`@inquirer-cli` is an independent project and is not affiliated with or endorsed by Inquirer.js.*

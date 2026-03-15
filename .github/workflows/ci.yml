@@ -1,18 +1,11 @@
-name: Publish
+name: CI
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
-
-    # https://docs.npmjs.com/generating-provenance-statements#example-github-actions-workflow
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - name: Checkout repository
@@ -26,7 +19,6 @@ jobs:
         with:
           node-version: 24
           cache: 'pnpm'
-          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -36,8 +28,3 @@ jobs:
 
       - name: Test
         run: pnpm test
-
-      - name: Publish to npm
-        run: pnpm -r publish --access public
-        env:
-          NPM_CONFIG_PROVENANCE: true

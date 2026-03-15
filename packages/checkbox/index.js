@@ -9,7 +9,7 @@ const args = minimist(process.argv.slice(2), {
   alias: { choice: 'c', required: 'r' },
 });
 const message = args._[0];
-const choices = [args.choice].flat();
+const choices = [args.choice].flat().filter(c => c !== undefined);
 const required = args.required;
 
 function showHelp() {
@@ -42,7 +42,7 @@ if (choices.length === 0) {
   process.exit(1);
 }
 
-(async () => {
+void (async () => {
   const answer = await checkbox({ message, choices, required }, { output: process.stderr });
   console.log(answer.join(' ')); // Log as a space-separated string
 })();

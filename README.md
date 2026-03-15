@@ -1,5 +1,9 @@
 # @inquirer-cli
 
+[![CI](https://github.com/fishballapp/inquirer-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/fishballapp/inquirer-cli/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@inquirer-cli/select)](https://www.npmjs.com/search?q=%40inquirer-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Interactive command-line prompts for shell scripts, powered by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js).
 
 The `@inquirer-cli` suite lets you add interactive prompts (text input, confirmations, selections, and more) to any shell script - no JavaScript required.

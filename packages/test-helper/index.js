@@ -3,7 +3,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const NPX_STUB = join(dirname(fileURLToPath(import.meta.url)), 'npx-stub.sh');
+const NPX_STUB = join(dirname(fileURLToPath(import.meta.url)), 'npx');
 
 function spawnWithInput(child, input, timeout) {
   return new Promise((resolve, reject) => {

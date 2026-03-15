@@ -1,0 +1,23 @@
+#!/bin/sh
+# Stub npx that resolves @inquirer-cli/* to local packages.
+# Strips the -y flag and maps package names to local index.js files.
+
+pkg=""
+set -- "$@" _END_
+while [ "$1" != "_END_" ]; do
+  case "$1" in
+    -y) ;;
+    @inquirer-cli/*)
+      pkg=$(echo "$1" | sed 's|@inquirer-cli/||' | tr -d '"')
+      ;;
+    *)
+      set -- "$@" "$1"
+      ;;
+  esac
+  shift
+done
+shift # remove _END_
+
+if [ -n "$pkg" ]; then
+  exec node "$INQUIRER_CLI_ROOT/packages/$pkg/index.js" "$@"
+fi

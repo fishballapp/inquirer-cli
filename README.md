@@ -147,7 +147,7 @@ fi
 
 ## Requirements
 
-- Node.js >= 16
+- Node.js >= 20.12.0
 
 ## Author
 

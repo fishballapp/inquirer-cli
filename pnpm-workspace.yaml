@@ -6,13 +6,13 @@ settings:
   cleanupUnusedCatalogs: true
 
 catalog:
-  '@inquirer/checkbox': ^5.1.0
-  '@inquirer/confirm': ^6.0.8
-  '@inquirer/editor': ^5.0.8
-  '@inquirer/input': ^5.0.8
-  '@inquirer/number': ^4.0.8
-  '@inquirer/password': ^5.0.8
-  '@inquirer/select': ^5.1.0
+  '@inquirer/checkbox': ^5.1.2
+  '@inquirer/confirm': ^6.0.10
+  '@inquirer/editor': ^5.0.10
+  '@inquirer/input': ^5.0.10
+  '@inquirer/number': ^4.0.10
+  '@inquirer/password': ^5.0.10
+  '@inquirer/select': ^5.1.2
   minimist: ^1.2.8
 
 onlyBuiltDependencies:

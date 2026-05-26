@@ -6,7 +6,7 @@ settings:
   cleanupUnusedCatalogs: true
 
 catalog:
-  '@inquirer/checkbox': ^5.1.5
+  '@inquirer/checkbox': ^5.2.0
   '@inquirer/confirm': ^6.0.13
   '@inquirer/editor': ^5.1.2
   '@inquirer/input': ^5.0.13

@@ -12,7 +12,7 @@ catalog:
   '@inquirer/input': ^5.0.13
   '@inquirer/number': ^4.0.13
   '@inquirer/password': ^5.0.13
-  '@inquirer/select': ^5.1.5
+  '@inquirer/select': ^5.2.0
   minimist: ^1.2.8
 
 onlyBuiltDependencies:

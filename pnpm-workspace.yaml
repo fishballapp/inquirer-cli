@@ -9,7 +9,7 @@ catalog:
   '@inquirer/checkbox': ^5.1.5
   '@inquirer/confirm': ^6.0.13
   '@inquirer/editor': ^5.1.2
-  '@inquirer/input': ^5.0.13
+  '@inquirer/input': ^5.1.0
   '@inquirer/number': ^4.0.13
   '@inquirer/password': ^5.0.13
   '@inquirer/select': ^5.1.5
